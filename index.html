@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Happy 27th Birthday ✦</title>
+<title>Happy 27th Birthday Baby ✦</title>
 <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Dancing+Script:wght@500;700&family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;1,400;1,600&display=swap" rel="stylesheet"/>
 <style>
   :root {
@@ -12,8 +12,8 @@
     --gold: #c9a843;
     --dark-gold: #7a5e1a;
     --brown: #3d2e0f;
-    --film-dark: #1a1208;
-    --film-mid: #2a1e0a;
+    --film-dark: #5f4720;
+    --film-mid: #7a5c2d;
     --hole: #0d0a04;
     --pink: #f06f90;
     --pink-light: #f5a0b5;
@@ -23,7 +23,15 @@
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
   body {
-    background: #111008;
+  background:
+    radial-gradient(circle at top, rgba(255,240,180,0.35) 0%, transparent 35%),
+    linear-gradient(
+      180deg,
+      #fff7cf 0%,
+      #fef1b8 28%,
+      #f8e49a 60%,
+      #ecd17a 100%
+    );
     font-family: 'Lato', sans-serif;
     min-height: 100vh;
     display: flex;
@@ -55,7 +63,7 @@
     transform: translateX(-50%);
     width: 600px;
     height: 600px;
-    background: radial-gradient(circle, rgba(200,168,67,0.08) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(255,230,140,0.22) 0%, transparent 70%);
     pointer-events: none;
     z-index: 0;
   }
@@ -85,7 +93,8 @@
   .film-strip {
     width: 320px;
     background: var(--film-dark);
-    border-radius: 6px;
+    border-radius: 18px;
+    backdrop-filter: blur(2px);
     position: relative;
     box-shadow:
       0 0 0 1px rgba(200,168,67,0.15),
@@ -312,22 +321,34 @@
 
   /* Slide caption */
   .slide-caption-bar {
-    margin-top: 6px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 8px;
-  }
+  margin-top: 12px;
+  padding: 0 4px 6px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+  .slide-caption-bar::before {
+  content: '';
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  top: -6px;
+  height: 1px;
+  background: rgba(200,168,67,0.08);
+}
 
   .slide-caption {
-    font-family: 'Dancing Script', cursive;
-    font-size: 14px;
-    color: rgba(200,168,67,0.6);
-    background: transparent;
-    border: none;
-    outline: none;
-    flex: 1;
-    text-align: center;
+  font-family: 'Dancing Script', cursive;
+  font-size: 16px;
+  color: rgba(245,226,122,0.78);
+  background: transparent;
+  border: none;
+  outline: none;
+  flex: 1;
+  text-align: center;
+  line-height: 1.4;
+  padding: 4px 0;
   }
 
   .slide-caption::placeholder {
@@ -335,11 +356,11 @@
   }
 
   .frame-counter {
-    font-family: 'Special Elite', cursive;
-    font-size: 9px;
-    color: rgba(200,168,67,0.3);
-    letter-spacing: 1px;
-    white-space: nowrap;
+  font-family: 'Special Elite', cursive;
+  font-size: 10px;
+  color: rgba(200,168,67,0.45);
+  letter-spacing: 1.5px;
+  white-space: nowrap;
   }
 
   /* ===== NAVIGATION ===== */
@@ -608,7 +629,7 @@
 
 <div class="scene">
 
-  <div class="top-label">✦ &nbsp; a birthday for you &nbsp; ✦</div>
+  <div class="top-label">✦ &nbsp; a birthday film strip for you &nbsp; ✦</div>
 
   <div class="film-strip" id="filmStrip">
 
@@ -706,7 +727,7 @@
 
       <!-- Film Footer -->
       <div class="film-footer">
-        <div class="film-code">BFF-2022-2024 &nbsp;✦&nbsp; FRAME 35mm &nbsp;✦&nbsp; DO NOT EXPOSE</div>
+        <div class="film-code">BFF-2022-and beyond &nbsp;✦&nbsp; FRAME 35mm &nbsp;✦&nbsp; DO NOT EXPOSE</div>
       </div>
 
     </div><!-- /film-content -->
@@ -715,9 +736,9 @@
   <!-- Below strip -->
   <div class="below-strip">
     <button class="surprise-btn" id="surpriseBtn" onclick="triggerSurprise()">
-      ✦ &nbsp; send her a little surprise &nbsp; ✦
+      ✦ &nbsp; click here for a little surprise &nbsp; ✦
     </button>
-    <div class="hint">open in a browser · screenshot or print to share</div>
+    <div class="hint">i love you always</div>
   </div>
 
 </div><!-- /scene -->
