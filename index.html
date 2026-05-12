@@ -235,7 +235,7 @@
   .photo-gate {
     position: relative;
     width: 100%;
-    aspect-ratio: 4/3;
+    aspect-ratio: 1/1;
     background: #0a0806;
     border: 1.5px solid rgba(200,168,67,0.2);
     border-radius: 2px;
@@ -256,10 +256,14 @@
   }
 
   .photo-slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: sepia(20%) contrast(1.05) brightness(0.95);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  padding: 10px 10px 28px 10px;
+  background: #f8f4ea;
+  transform: rotate(1deg);
+  filter: sepia(15%) contrast(1.02) brightness(0.98);
+}
   }
 
   .photo-slide.upload-slot {
@@ -724,14 +728,20 @@
   let current = 0;
 
   const captions = [
-    "the day we met ♡",
-    "our fave memory ✦",
-    "business besties 🌟",
-    "silly moments together",
-    "us, being iconic ✨"
+    "where it all started♡",
+    "my fav memory of us thus far ✦",
+    "your dedication for our baby, AP 🌟",
+    "you and your iconic backpack",
+    "by far memorable milestones we achieved together - legally registered business ✨"
   ];
 
-  const images = Array(TOTAL).fill(null); // base64 data URLs
+  const images = [
+  "images/photo1.jpg",
+  "images/photo2.jpg",
+  "images/photo3.jpg",
+  "images/photo4.jpg",
+  "images/photo5.jpg"
+]; // base64 data URLs
   const captionEdits = [...captions];
 
   // ===== SPROCKET HOLES =====
