@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Happy 27th Birthday Baby ✦</title>
+<title>Happy 27th Birthday Baby✦</title>
 <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Dancing+Script:wght@500;700&family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;1,400;1,600&display=swap" rel="stylesheet"/>
 <style>
   :root {
@@ -321,6 +321,8 @@
 
   /* Slide caption */
   .slide-caption-bar {
+  flex-direction: column;
+  align-items: center;
   margin-top: 12px;
   padding: 0 4px 6px;
   display: flex;
@@ -341,15 +343,21 @@
   .slide-caption {
   font-family: 'Dancing Script', cursive;
   font-size: 16px;
-  color: rgba(245,226,122,0.78);
+  color: rgba(245,226,122,0.82);
   background: transparent;
   border: none;
   outline: none;
-  flex: 1;
+  width: 100%;
+  max-width: 240px;
+  margin: 0 auto;
   text-align: center;
   line-height: 1.4;
-  padding: 4px 0;
-  }
+  padding: 4px 8px;
+
+  white-space: normal;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
 
   .slide-caption::placeholder {
     color: rgba(200,168,67,0.25);
@@ -705,7 +713,7 @@
 
         <div class="slide-caption-bar">
           <div class="frame-counter" id="frameCounter">01 / 05</div>
-          <input class="slide-caption" id="slideCaption" type="text" maxlength="45" placeholder="add a caption ♡"/>
+         <textarea class="slide-caption" id="slideCaption" rows="2" maxlength="80" placeholder="add a caption ♡" disabled></textarea>
         </div>
       </div>
 
@@ -719,9 +727,9 @@
       <!-- Message -->
       <div class="message-section">
         <div class="msg-label">a little note</div>
-        <textarea class="msg-text" id="msgText" rows="3" placeholder="write something from your heart here... ♡"></textarea>
+       <textarea class="msg-text" id="msgText" rows="3" placeholder="Happy 27th Birthday baby! AYYEEEE she oldie lol! but anyway can you believe we have known each other since i was 22 and you were only 23...dem how time flies man...I am glad that in this life, our path crossed and Allah SWT let us met and built something meaningful together which is our own baby, ANGGUN PESONA AKA HOUSE OF ANGGUN ENTERPRISE! So crazy how so many things happened over the last yearssss between us, our business, and i can't wait to see what the future holds for us. I pray for you to always be under Allah's care & guidance, and may He eases all your affairs in this dunya wal akhirah <3 Like I always said, it's kinda crazy how a single choice I made back in 2022 of accepting the job offer at Kedai Oren brought us here...I hope we will always remains as each other's companion in friendship and as business partner in this life and the afterlife (if maybe we wanna do business and there's an opportunity again in the next life hahaha Amin Ya Rabb! I love doing it with you and cannot imagine doing it with someone else), I will always choose you, and I hope you do too... I have fun navigating this 20s (adult) life hahaha thank you for always being so gentle and show me what gentle love feels like. Although sometimes I feel like I annoyed you when I asked questions doubting about something (like do you love me? am I your best friend? Did you get mad at me? Did you bla bla bla bla..... can be endless sometimes hm.....maybe there will be more coming cuz ya girl is just insecure and always feel replaceable lmao, but Im trying to work on it....do you see the progress? lmao).  If anything you always deserve the best of the best, truly! May you become wiser, richer, glowy-ier, calmer, kalau taller maybe cannot anymore hahaha!  ♡" disabled></textarea>
         <div class="msg-footer">
-          <input class="signature" id="sigInput" type="text" maxlength="40" placeholder="— with love, ..."/>
+          <input class="signature" id="sigInput" type="text" maxlength="40" placeholder="— with love,Azleeza" disabled/>
         </div>
       </div>
 
@@ -738,7 +746,7 @@
     <button class="surprise-btn" id="surpriseBtn" onclick="triggerSurprise()">
       ✦ &nbsp; click here for a little surprise &nbsp; ✦
     </button>
-    <div class="hint">i love you always</div>
+    <div class="hint">i love you always baby</div>
   </div>
 
 </div><!-- /scene -->
