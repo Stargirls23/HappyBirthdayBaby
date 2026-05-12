@@ -633,9 +633,71 @@
   ::-webkit-scrollbar { width: 4px; }
   ::-webkit-scrollbar-track { background: #0a0806; }
   ::-webkit-scrollbar-thumb { background: rgba(200,168,67,0.3); border-radius: 2px; }
+
+  #introScreen {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(180deg, #fff7cf, #f5e27a);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.booth {
+  text-align: center;
+  font-family: 'Special Elite', cursive;
+  color: #1a120b;
+}
+
+.booth-title {
+  font-size: 18px;
+  letter-spacing: 4px;
+  margin-bottom: 10px;
+}
+
+.booth-sub {
+  font-size: 12px;
+  margin-bottom: 25px;
+  opacity: 0.7;
+}
+
+.print-btn {
+  padding: 12px 22px;
+  border-radius: 30px;
+  border: 1px solid #1a120b;
+  background: transparent;
+  cursor: pointer;
+  font-family: 'Dancing Script', cursive;
+  font-size: 16px;
+  color: #1a120b;
+  transition: 0.2s ease;
+}
+
+.print-btn:hover {
+  background: rgba(26,18,11,0.08);
+  transform: scale(1.05);
+}
+
+.scene {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 0.8s ease;
+}
 </style>
 </head>
 <body>
+  <div id="introScreen">
+    <div class="scene">
+  <div class="booth">
+    <div class="booth-title">✦ PHOTOBOOTH ✦</div>
+    <div class="booth-sub">ready to print your memory?</div>
+
+    <button onclick="startStrip()" class="print-btn">
+      click to print photo strip
+    </button>
+  </div>
+</div>
 
 <div id="confetti"></div>
 
@@ -956,6 +1018,19 @@
   buildThumbs();
   showSlide(0, false);
   initCaptionListener();
+  function startStrip() {
+  const intro = document.getElementById('introScreen');
+  const strip = document.querySelector('.scene');
+
+  intro.style.transition = "opacity 0.6s ease";
+  intro.style.opacity = "0";
+
+  setTimeout(() => {
+    intro.style.display = "none";
+    strip.style.opacity = "1";
+    strip.style.transform = "translateY(0)";
+  }, 600);
+}
 </script>
 </body>
 </html>
